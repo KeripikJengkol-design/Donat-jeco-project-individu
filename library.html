@@ -55,3 +55,17 @@
         <p>Your Friendly Neighborhood Music Player.</p>
         <small>© 2026 MyMusic. All rights reserved.</small>
     </footer>
+
+    <aside class="player-bar" aria-label="Pemutar musik">
+        <div class="now-playing">
+            <div class="player-icon">♫</div>
+            <div><strong id="player-title">Belum ada lagu</strong><span id="player-artist">Pilih lagu untuk diputar</span></div>
+        </div>
+        <div class="player-controls">
+            <button id="play-toggle" class="play-button" type="button" aria-label="Putar atau jeda">▶</button>
+            <span id="player-status">Ready to play</span>
+        </div>
+        <audio id="audio-player" preload="metadata"></audio>
+    </aside>
+</body>
+</html>
