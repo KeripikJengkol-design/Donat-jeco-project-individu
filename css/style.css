@@ -1,0 +1,21 @@
+:root {
+    --red: #e62429;
+    --red-dark: #b91c22;
+    --blue: #1f4e8c;
+    --blue-dark: #102d55;
+    --ink: #171717;
+    --muted: #697386;
+    --paper: #f4f6fa;
+    --white: #ffffff;
+    --line: #e2e6ed;
+    --shadow: 0 8px 24px rgba(24, 48, 82, 0.09);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
