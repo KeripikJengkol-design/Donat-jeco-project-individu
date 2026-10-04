@@ -201,3 +201,23 @@ button {
         transparent 37px 65px
     );
 }
+
+.song-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.song-card {
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: transform 0.22s, box-shadow 0.22s;
+}
+
+.song-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(24, 48, 82, 0.14);
+}
