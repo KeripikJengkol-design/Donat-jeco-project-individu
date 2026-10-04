@@ -439,3 +439,46 @@ function toggleFavorite(id) {
     saveFavorites();
     renderAll();
 }
+
+document.addEventListener("click", event => {
+    const button =
+        event.target.closest(
+            "button[data-action]"
+        );
+
+    if (!button) return;
+    const id =
+        Number(button.dataset.id);
+    if (button.dataset.action === "play") {
+        playSong(id);
+    }
+
+
+    if (button.dataset.action === "favorite") {
+        toggleFavorite(id);
+    }
+});
+
+if (playToggle) {
+    playToggle.addEventListener(
+        "click",
+        async () => {
+            if (!currentSong) {
+                playerStatus.textContent =
+                    "Pilih lagu terlebih dahulu";
+                return;
+            }
+
+            if (audioPlayer.paused) {
+                try {
+                    await audioPlayer.play();
+                } catch (error) {
+                    playerStatus.textContent =
+                        "File MP3 belum tersedia";
+                }
+            } else {
+                audioPlayer.pause();
+            }
+        }
+    );
+}
