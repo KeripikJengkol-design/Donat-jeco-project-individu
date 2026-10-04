@@ -19,3 +19,68 @@
 html {
     scroll-behavior: smooth;
 }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.site-header {
+    min-height: 82px;
+    padding: 16px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: var(--white);
+    border-bottom: 3px solid var(--red);
+}
+
+.brand {
+    color: var(--red);
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: -0.8px;
+}
+
+.brand span {
+    color: var(--blue);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-weight: 600;
+    color: #292d35;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--red);
+}
