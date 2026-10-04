@@ -315,3 +315,18 @@ function createSongCard(song) {
     );
     return card;
 }
+
+function renderList(element, songsToShow) {
+    if (!element) return;
+    element.replaceChildren(
+        ...songsToShow.map(createSongCard)
+    );
+}
+
+function renderHome() {
+    if (!homeList) return;
+    renderList(
+        homeList,
+        songs.slice(0, 4)
+    );
+}
