@@ -482,3 +482,64 @@ if (playToggle) {
         }
     );
 }
+
+if (audioPlayer) {
+    audioPlayer.addEventListener(
+        "play",
+        () => {
+            playToggle.textContent = "Ⅱ";
+            playerStatus.textContent =
+                "Sedang diputar";
+        }
+    );
+
+    audioPlayer.addEventListener(
+        "pause",
+        () => {
+            playToggle.textContent = "▶";
+            if (currentSong) {
+                playerStatus.textContent =
+                    "Dijeda";
+            }
+        }
+    );
+
+    audioPlayer.addEventListener(
+        "ended",
+        () => {
+            playToggle.textContent = "▶";
+            playerStatus.textContent =
+                "Lagu selesai";
+        }
+    );
+
+    audioPlayer.addEventListener(
+        "error",
+        () => {
+            playerStatus.textContent =
+                "File MP3 belum tersedia";
+        }
+    );
+
+}
+
+if (searchInput) {
+    searchInput.addEventListener(
+        "input",
+        renderLibrary
+    );
+}
+
+if (genreFilter) {
+    genreFilter.addEventListener(
+        "change",
+        renderLibrary
+    );
+}
+
+if (sortSelect) {
+    sortSelect.addEventListener(
+        "change",
+        renderLibrary
+    );
+}
