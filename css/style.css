@@ -302,3 +302,9 @@ button {
     background: var(--red);
     color: white;
 }
+
+.empty-message {
+    padding: 30px 15px;
+    color: var(--muted);
+    text-align: center;
+}
