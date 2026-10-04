@@ -483,3 +483,32 @@ button {
 .play-button:hover {
     background: var(--red-dark);
 }
+
+@media (max-width: 950px) {
+    .hero {
+        width: 90%;
+        min-height: 390px;
+        padding: 35px;
+    }
+
+    .hero-content {
+        width: 65%;
+    }
+
+    .hero-art {
+        width: 48%;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .content-section,
+    .page-main {
+        width: 90%;
+    }
+
+    .song-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
