@@ -128,3 +128,23 @@ const songs = [
         audio: "assets/audio/Somebody's Pleasure.mp3"
     }
 ];
+
+const audioPlayer = document.querySelector("#audio-player");
+const playerTitle = document.querySelector("#player-title");
+const playerArtist = document.querySelector("#player-artist");
+const playerStatus = document.querySelector("#player-status");
+const playToggle = document.querySelector("#play-toggle");
+
+const searchInput = document.querySelector("#search-input");
+const genreFilter = document.querySelector("#genre-filter");
+const sortSelect = document.querySelector("#sort-select");
+
+const homeList = document.querySelector("#home-song-list");
+const libraryList = document.querySelector("#library-song-list");
+const favoriteList = document.querySelector("#favorite-song-list");
+
+const libraryEmpty = document.querySelector("#library-empty-message");
+const favoriteEmpty = document.querySelector("#favorite-empty-message");
+
+const songCount = document.querySelector("#song-count");
+const favoriteCount = document.querySelector("#favorite-count");
