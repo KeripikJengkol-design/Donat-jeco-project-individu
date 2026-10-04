@@ -403,3 +403,83 @@ button {
     color: #b9c8dc;
     font-size: 11px;
 }
+
+.player-bar {
+    position: fixed;
+    z-index: 20;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-height: 88px;
+    padding: 15px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #171717;
+    color: white;
+    border-top: 3px solid var(--red);
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.now-playing {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-width: 0;
+}
+
+.player-icon {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: #292929;
+    color: #ff454b;
+    font-size: 24px;
+}
+
+.now-playing div:last-child {
+    min-width: 0;
+}
+
+.now-playing strong,
+.now-playing span {
+    display: block;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.now-playing strong {
+    font-size: 14px;
+}
+
+.now-playing span {
+    color: #c6cbd3;
+    font-size: 12px;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #c6cbd3;
+    font-size: 12px;
+}
+
+.play-button {
+    width: 45px;
+    height: 45px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--red);
+    color: white;
+    font-size: 17px;
+}
+
+.play-button:hover {
+    background: var(--red-dark);
+}
