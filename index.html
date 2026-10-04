@@ -8,26 +8,44 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
+
 <body data-page="home">
     <header class="site-header">
-        <a class="brand" href="index.html">My<span>Music</span></a>
+        <a class="brand" href="#home">My<span>Music</span></a>
         <nav class="nav-links" aria-label="Navigasi utama">
-            <a class="active" href="index.html">Home</a>
-            <a href="library.html">My Library</a>
-            <a href="favorites.html">Favorites</a>
+            <a class="active" href="#home" data-page-link="home">Home</a>
+            <a href="#library" data-page-link="library">My Library</a>
+            <a href="#favorites" data-page-link="favorites">Favorites</a>
         </nav>
     </header>
 
-    <main>
+    <main id="home" class="page-section">
         <section class="hero">
             <div class="hero-content">
-                <p class="eyebrow">YOUR FRIENDLY NEIGHBORHOOD MUSIC SPACE</p>
-                <h1>With Great Music,<br><span>Comes Great Memories.</span></h1>
-                <p class="hero-description">Setiap lagu punya cerita. Temukan musik yang menemani setiap perjalananmu!</p>
-                <a class="primary-button" href="library.html">Explore Your Sound <span aria-hidden="true">→</span></a>
+                <p class="eyebrow">
+                    YOUR FRIENDLY NEIGHBORHOOD MUSIC SPACE
+                </p>
+
+                <h1>
+                    With Great Music,<br>
+                    <span>Comes Great Memories.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Setiap lagu punya cerita.
+                    Temukan musik yang menemani setiap perjalananmu!
+                </p>
+
+                <a class="primary-button" href="#library" data-page-link="library">
+                    Explore Your Sound
+                    <span aria-hidden="true">→</span>
+                </a>
             </div>
+
             <div class="hero-art" aria-hidden="true">
                 <div class="web-lines"></div>
+            </div>
+        </section>
 
         <section class="content-section">
             <div class="section-heading">
@@ -35,29 +53,169 @@
                     <p class="eyebrow red">YOUR COLLECTION</p>
                     <h2>Recently Added</h2>
                 </div>
-                <a class="text-link" href="library.html">View all songs →</a>
+
+                <a class="text-link"
+                   href="#library"
+                   data-page-link="library">
+                    View all songs →
+                </a>
             </div>
-            <div id="song-list" class="song-grid"></div>
-            <p id="empty-message" class="empty-message" hidden>Belum ada lagu yang tersedia.</p>
+
+            <div id="home-song-list" class="song-grid"></div>
+            <p id="home-empty-message"
+               class="empty-message"
+               hidden>
+                Belum ada lagu yang tersedia.
+            </p>
         </section>
     </main>
 
+    <main id="library"
+          class="page-main page-section"
+          hidden>
+
+        <section class="page-intro">
+            <p class="eyebrow red">
+                YOUR FRIENDLY NEIGHBORHOOD PLAYLIST
+            </p>
+            <h1>
+                My Library <span>🕸</span>
+            </h1>
+            <p>
+                Semua soundtrack untuk menemani setiap petualanganmu.
+            </p>
+        </section>
+
+
+        <section class="library-tools"
+                 aria-label="Cari dan atur lagu">
+
+            <input
+                id="search-input"
+                type="search"
+                placeholder="Cari judul atau penyanyi..."
+                aria-label="Cari lagu">
+
+            <select id="genre-filter"
+                    aria-label="Filter genre">
+                <option value="all">Semua genre</option>
+                <option value="Pop">Pop</option>
+                <option value="Rock">Rock</option>
+                <option value="Indie">Indie</option>
+                <option value="R&B">R&amp;B</option>
+            </select>
+
+            <select id="sort-select"
+                    aria-label="Urutkan lagu">
+                <option value="default">
+                    Urutan awal
+                </option>
+                <option value="title">
+                    Judul A–Z
+                </option>
+                <option value="artist">
+                    Penyanyi A–Z
+                </option>
+            </select>
+        </section>
+
+        <div class="section-heading library-heading">
+            <h2>All Songs</h2>
+            <span id="song-count"
+                  class="song-count"></span>
+        </div>
+
+        <div id="library-song-list"
+             class="song-grid">
+        </div>
+
+        <p id="library-empty-message"
+           class="empty-message"
+           hidden>
+            Lagu tidak ditemukan.
+            Coba kata kunci lain.
+        </p>
+    </main>
+
+    <main id="favorites"
+          class="page-main page-section"
+          hidden>
+
+        <section class="page-intro">
+            <p class="eyebrow red">
+                YOUR PERSONAL SOUNDTRACK
+            </p>
+            <h1>
+                Favorite Songs <span>♥</span>
+            </h1>
+            <p>
+                Kumpulan lagu pilihan yang selalu ingin kamu dengarkan.
+            </p>
+        </section>
+
+        <div class="section-heading library-heading">
+            <h2>Your Favorites</h2>
+            <span id="favorite-count"
+                  class="song-count"></span>
+        </div>
+
+        <div id="favorite-song-list"
+             class="song-grid">
+        </div>
+
+        <p id="favorite-empty-message"
+           class="empty-message"
+           hidden>
+            Belum ada lagu favorit.
+            Tekan ♡ pada kartu lagu untuk menambahkannya.
+        </p>
+    </main>
+
     <footer class="site-footer">
-        <p class="footer-slogan">With great music comes great memories. <span>🕸</span></p>
-        <p>Your Friendly Neighborhood Music Player.</p>
-        <small>© 2026 MyMusic. All rights reserved.</small>
+        <p class="footer-slogan">
+            With great music comes great memories.<span>🕸</span>
+        </p>
+        <p>
+            Your Friendly Neighborhood Music Player.
+        </p>
+        <small>
+            © 2026 MyMusic. All rights reserved.
+        </small>
     </footer>
 
-    <aside class="player-bar" aria-label="Pemutar musik">
+    <aside class="player-bar"
+           aria-label="Pemutar musik">
         <div class="now-playing">
-            <div class="player-icon">♫</div>
-            <div><strong id="player-title">Belum ada lagu</strong><span id="player-artist">Pilih lagu untuk diputar</span></div>
+            <div class="player-icon">
+                ♫
+            </div>
+            <div>
+                <strong id="player-title">
+                    Belum ada lagu
+                </strong>
+                <span id="player-artist">
+                    Pilih lagu untuk diputar
+                </span>
+            </div>
         </div>
+
         <div class="player-controls">
-            <button id="play-toggle" class="play-button" type="button" aria-label="Putar atau jeda">▶</button>
-            <span id="player-status">Ready to play</span>
+            <button
+                id="play-toggle"
+                class="play-button"
+                type="button"
+                aria-label="Putar atau jeda">
+                ▶
+            </button>
+
+            <span id="player-status">
+                Ready to play
+            </span>
         </div>
-        <audio id="audio-player" preload="metadata"></audio>
+
+        <audio id="audio-player"
+               preload="metadata">
+        </audio>
     </aside>
 </body>
 </html>
