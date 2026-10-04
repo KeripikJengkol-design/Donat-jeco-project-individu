@@ -374,3 +374,32 @@ button {
     color: var(--muted);
     font-size: 14px;
 }
+
+.site-footer {
+    padding: 32px 20px 70px;
+    background: var(--blue-dark);
+    color: white;
+    text-align: center;
+}
+
+.site-footer .footer-slogan {
+    margin-bottom: 5px;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.site-footer .footer-slogan span {
+    color: #ff6b70;
+}
+
+.site-footer p:not(.footer-slogan) {
+    color: #d8e3f3;
+    font-size: 13px;
+}
+
+.site-footer small {
+    display: block;
+    margin-top: 14px;
+    color: #b9c8dc;
+    font-size: 11px;
+}
