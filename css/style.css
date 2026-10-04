@@ -308,3 +308,32 @@ button {
     color: var(--muted);
     text-align: center;
 }
+
+.page-main {
+    min-height: 55vh;
+    padding-top: 42px;
+}
+
+.page-intro {
+    margin-bottom: 30px;
+    padding: 28px 0;
+}
+
+.page-intro .eyebrow {
+    margin-bottom: 9px;
+}
+
+.page-intro h1 {
+    color: var(--blue-dark);
+    font-size: clamp(32px, 4vw, 44px);
+    line-height: 1.2;
+}
+
+.page-intro h1 span {
+    color: var(--red);
+}
+
+.page-intro p:last-child {
+    margin-top: 10px;
+    color: var(--muted);
+}
