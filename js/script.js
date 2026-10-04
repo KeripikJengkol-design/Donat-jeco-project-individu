@@ -400,3 +400,24 @@ function renderLibrary() {
             `${result.length} lagu`;
     }
 }
+
+function renderFavorites() {
+    if (!favoriteList) return;
+    const result = songs.filter(
+        song => favorites.includes(song.id)
+    );
+
+    renderList(
+        favoriteList,
+        result
+    );
+
+    if (favoriteEmpty) {
+        favoriteEmpty.hidden =
+            result.length > 0;
+    }
+    if (favoriteCount) {
+        favoriteCount.textContent =
+            `${result.length} lagu`;
+    }
+}
