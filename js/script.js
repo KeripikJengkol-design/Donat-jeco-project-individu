@@ -148,3 +148,24 @@ const favoriteEmpty = document.querySelector("#favorite-empty-message");
 
 const songCount = document.querySelector("#song-count");
 const favoriteCount = document.querySelector("#favorite-count");
+
+function loadFavorites() {
+    try {
+        const saved = JSON.parse(
+            localStorage.getItem("myMusicFavorites") || "[]"
+        );
+        return Array.isArray(saved) ? saved : [];
+    } catch (error) {
+        return [];
+    }
+}
+
+
+let favorites = loadFavorites();
+
+function saveFavorites() {
+    localStorage.setItem(
+        "myMusicFavorites",
+        JSON.stringify(favorites)
+    );
+}
