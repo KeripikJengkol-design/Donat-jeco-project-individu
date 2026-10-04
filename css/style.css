@@ -10,6 +10,7 @@
     --line: #e2e6ed;
     --shadow: 0 8px 24px rgba(24, 48, 82, 0.09);
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -190,6 +191,30 @@ button {
     background: #f4f6fa;
 }
 
+.hero-art {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 49%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-art img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 94%;
+    object-fit: contain;
+    object-position: right bottom;
+    filter: drop-shadow(-12px 8px 18px rgba(0, 0, 0, 0.22));
+}
+
 .web-lines {
     position: absolute;
     inset: 0;
@@ -200,6 +225,38 @@ button {
         rgba(255, 255, 255, 0.45) 35px 36px,
         transparent 37px 65px
     );
+}
+
+.content-section,
+.page-main {
+    width: 86%;
+    max-width: 1320px;
+    margin: 0 auto 55px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.section-heading h2,
+.page-main h2 {
+    color: var(--blue-dark);
+    font-size: 27px;
+    line-height: 1.2;
+}
+
+.text-link {
+    color: var(--red);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.text-link:hover {
+    text-decoration: underline;
 }
 
 .song-grid {
@@ -338,7 +395,6 @@ button {
     color: var(--muted);
 }
 
-/* Kolom pencarian dan filter */
 .library-tools {
     display: flex;
     gap: 12px;
