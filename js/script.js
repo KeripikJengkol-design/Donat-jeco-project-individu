@@ -543,3 +543,80 @@ if (sortSelect) {
         renderLibrary
     );
 }
+
+const pageSections =
+    document.querySelectorAll(".page-section");
+const pageLinks =
+    document.querySelectorAll("[data-page-link]");
+
+function showPage(pageName) {
+    pageSections.forEach(section => {
+        section.hidden =
+            section.id !== pageName;
+    });
+
+
+    pageLinks.forEach(link => {
+        link.classList.toggle(
+            "active",
+            link.dataset.pageLink === pageName
+        );
+    });
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+    document.body.dataset.page =
+        pageName;
+
+    if (pageName === "library") {
+        renderLibrary();
+    }
+
+    if (pageName === "favorites") {
+        renderFavorites();
+    }
+
+}
+
+pageLinks.forEach(link => {
+    link.addEventListener(
+        "click",
+        event => {
+            event.preventDefault();
+            const target =
+                link.dataset.pageLink;
+            history.pushState(
+                null,
+                "",
+                `#${target}`
+            );
+            showPage(target);
+        }
+    );
+});
+
+window.addEventListener(
+    "popstate",
+    () => {
+        const target =
+            window.location.hash.replace(
+                "#",
+                ""
+            ) || "home";
+        showPage(target);
+    }
+);
+
+const initialPage =
+    window.location.hash.replace(
+        "#",
+        ""
+    ) || "home";
+
+showPage(initialPage);
+
+renderAll();
