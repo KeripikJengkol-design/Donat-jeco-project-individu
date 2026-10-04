@@ -206,3 +206,112 @@ async function playSong(id) {
     }
 
 }
+
+function createSongCard(song) {
+    const isFavorite = favorites.includes(song.id);
+    const card = document.createElement("article");
+    card.className = "song-card";
+
+    const cover = document.createElement("div");
+    cover.className = "song-cover";
+
+
+    const image = document.createElement("img");
+    image.src = song.cover;
+    image.alt = `Sampul lagu ${song.title}`;
+
+
+    image.onerror = () => {
+        image.remove();
+        cover.textContent = "♫";
+    };
+
+
+    cover.appendChild(image);
+
+
+    const details = document.createElement("div");
+    details.className = "song-details";
+
+
+    const title = document.createElement("h3");
+    title.textContent = song.title;
+
+
+    const artist = document.createElement("p");
+    artist.textContent = song.artist;
+
+
+    const meta = document.createElement("div");
+    meta.className = "song-meta";
+
+
+    const genre = document.createElement("span");
+    genre.className = "genre-tag";
+    genre.textContent = song.genre;
+
+
+    const actions = document.createElement("div");
+    actions.className = "song-actions";
+
+
+    const playButton = document.createElement("button");
+    playButton.type = "button";
+    playButton.textContent = "▶";
+    playButton.title = `Putar ${song.title}`;
+
+    playButton.setAttribute(
+        "aria-label",
+        `Putar ${song.title}`
+    );
+
+    playButton.dataset.action = "play";
+
+    playButton.dataset.id = song.id;
+
+
+    const favoriteButton = document.createElement("button");
+
+    favoriteButton.type = "button";
+
+    favoriteButton.className =
+        `favorite-btn${isFavorite ? " is-favorite" : ""}`;
+
+    favoriteButton.textContent =
+        isFavorite ? "♥" : "♡";
+
+    favoriteButton.title =
+        isFavorite
+            ? "Hapus dari favorit"
+            : "Tambah ke favorit";
+
+    favoriteButton.setAttribute(
+        "aria-label",
+        favoriteButton.title
+    );
+
+    favoriteButton.dataset.action = "favorite";
+    favoriteButton.dataset.id = song.id;
+
+    actions.append(
+        playButton,
+        favoriteButton
+    );
+
+    meta.append(
+        genre,
+        actions
+    );
+
+    details.append(
+        title,
+        artist,
+        meta
+    );
+
+    card.append(
+        cover,
+        details
+    );
+    return card;
+}
