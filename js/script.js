@@ -169,3 +169,40 @@ function saveFavorites() {
         JSON.stringify(favorites)
     );
 }
+
+let currentSong = null;
+async function playSong(id) {
+    const song = songs.find(item => item.id === id);
+    if (!song || !audioPlayer) return;
+
+    if (
+        currentSong &&
+        currentSong.id === id &&
+        !audioPlayer.paused
+    ) {
+        audioPlayer.pause();
+        return;
+    }
+
+    currentSong = song;
+
+
+    playerTitle.textContent = song.title;
+    playerArtist.textContent = song.artist;
+    playerStatus.textContent = "Memuat lagu...";
+
+
+    if (audioPlayer.src !== new URL(song.audio, window.location.href).href) {
+        audioPlayer.src = song.audio;
+    }
+
+
+    try {
+        await audioPlayer.play();
+    } catch (error) {
+        playerStatus.textContent =
+            "File MP3 belum tersedia atau tidak dapat diputar";
+        playToggle.textContent = "▶";
+    }
+
+}
