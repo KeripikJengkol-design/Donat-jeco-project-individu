@@ -421,3 +421,21 @@ function renderFavorites() {
             `${result.length} lagu`;
     }
 }
+
+function renderAll() {
+    renderHome();
+    renderLibrary();
+    renderFavorites();
+}
+
+function toggleFavorite(id) {
+    if (favorites.includes(id)) {
+        favorites = favorites.filter(
+            favoriteId => favoriteId !== id
+        );
+    } else {
+        favorites.push(id);
+    }
+    saveFavorites();
+    renderAll();
+}
