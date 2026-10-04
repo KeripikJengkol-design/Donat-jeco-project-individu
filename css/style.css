@@ -239,3 +239,20 @@ button {
     display: block;
     object-fit: cover;
 }
+
+.song-details {
+    padding: 14px 14px 16px;
+}
+
+.song-details h3 {
+    overflow: hidden;
+    margin-bottom: 3px;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.song-details p {
+    color: var(--muted);
+    font-size: 13px;
+}
