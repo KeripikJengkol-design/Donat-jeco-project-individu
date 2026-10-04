@@ -337,3 +337,40 @@ button {
     margin-top: 10px;
     color: var(--muted);
 }
+
+/* Kolom pencarian dan filter */
+.library-tools {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.library-tools input,
+.library-tools select {
+    min-height: 46px;
+    padding: 10px 13px;
+    border: 1px solid #d6dce6;
+    border-radius: 9px;
+    background: white;
+    color: var(--ink);
+}
+
+.library-tools input {
+    flex: 1;
+    min-width: 180px;
+}
+
+.library-tools input:focus,
+.library-tools select:focus {
+    outline: 2px solid var(--blue);
+    outline-offset: 1px;
+}
+
+.library-heading {
+    align-items: center;
+}
+
+.song-count {
+    color: var(--muted);
+    font-size: 14px;
+}
