@@ -330,3 +330,73 @@ function renderHome() {
         songs.slice(0, 4)
     );
 }
+
+function renderLibrary() {
+    if (!libraryList) return;
+    let result = [...songs];
+
+    const keyword =
+        searchInput
+            ? searchInput.value.trim().toLowerCase()
+            : "";
+
+
+    const selectedGenre =
+        genreFilter
+            ? genreFilter.value
+            : "all";
+
+
+    const selectedSort =
+        sortSelect
+            ? sortSelect.value
+            : "default";
+
+
+    result = result.filter(song =>
+        song.title
+            .toLowerCase()
+            .includes(keyword)
+        ||
+        song.artist
+            .toLowerCase()
+            .includes(keyword)
+    );
+
+    if (selectedGenre !== "all") {
+        result = result.filter(
+            song => song.genre === selectedGenre
+        );
+    }
+
+    if (selectedSort === "title") {
+        result.sort(
+            (a, b) =>
+                a.title.localeCompare(b.title)
+        );
+    }
+
+
+    if (selectedSort === "artist") {
+        result.sort(
+            (a, b) =>
+                a.artist.localeCompare(b.artist)
+        );
+    }
+
+    renderList(
+        libraryList,
+        result
+    );
+
+    if (libraryEmpty) {
+        libraryEmpty.hidden =
+            result.length > 0;
+    }
+
+
+    if (songCount) {
+        songCount.textContent =
+            `${result.length} lagu`;
+    }
+}
