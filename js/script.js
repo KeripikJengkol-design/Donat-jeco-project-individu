@@ -191,6 +191,78 @@ const songs = [
         cover: "assets/images/Drag Path.jpg",
         audio: "assets/audio/Drag Path.mp3"
     },
+    {
+        id: 25,
+        title: "Multo",
+        artist: "Cup To joe",
+        genre: "Pop",
+        cover: "assets/images/Multo.jpg",
+        audio: "assets/audio/Multo.mp3"
+    },
+    {
+        id: 26,
+        title: "Prom Queen",
+        artist: "Beach Bunny",
+        genre: "Indie",
+        cover: "assets/images/Prom Queen.jpg",
+        audio: "assets/audio/Prom Queen.mp3"
+    },
+    {
+        id: 27,
+        title: "Hingga Tua Bersama",
+        artist: "Rizky Febian",
+        genre: "Pop",
+        cover: "assets/images/Hingga Tua Bersama.jpg",
+        audio: "assets/audio/Hingga Tua Bersama.mp3"
+    },
+    {
+        id: 28,
+        title: "I Thought I Saw Your Face Today",
+        artist: "Twenty One Pilots",
+        genre: "Indie",
+        cover: "assets/images/I Thought I Saw Your Face Today.jpg",
+        audio: "assets/audio/I Thought I Saw Your Face Today.mp3"
+    },
+    {
+        id: 29,
+        title: "Akhir Tak Bahagia",
+        artist: "Misellia",
+        genre: "Pop",
+        cover: "assets/images/Akhir Tak Bahagia.jpg",
+        audio: "assets/audio/Akhir Tak Bahagia.mp3"
+    },
+    {
+        id: 30,
+        title: "Treat You Better",
+        artist: "Shawn Mendes",
+        genre: "Pop",
+        cover: "assets/images/Treat You Better.jpg",
+        audio: "assets/audio/Treat You Better.mp3"
+    },
+    {
+        id: 31,
+        title: "Saturn",
+        artist: "SZA",
+        genre: "R&B",
+        cover: "assets/images/Saturn.jpg",
+        audio: "assets/audio/Saturn.mp3"
+    },
+    {
+        id: 32,
+        title: "Imagination",
+        artist: "Shawn Mendes",
+        genre: "Pop",
+        cover: "assets/images/Imagination.jpg",
+        audio: "assets/audio/Imagination.mp3"
+    },
+        {
+        id: 33,
+        title: "I Look After You",
+        artist: "The Fray",
+        genre: "Rock",
+        cover: "assets/images/I Look After You.jpg",
+        audio: "assets/audio/I Look After You.mp3"
+    },
     
 ];
 
