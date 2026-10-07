@@ -139,10 +139,59 @@ const songs = [
         id: 18,
         title: "I Wanna Be Yours",
         artist: "Arctic Monkeys",
-        genre: "Pop",
+        genre: "Indie",
         cover: "assets/images/I Wanna Be Yours.jpg",
         audio: "assets/audio/I Wanna Be Yours.mp3"
     },
+    {
+        id: 19,
+        title: "About You",
+        artist: "The 1975",
+        genre: "Pop",
+        cover: "assets/images/About You.jpg",
+        audio: "assets/audio/About You.mp3"
+    },
+    {
+        id: 20,
+        title: "Love Me Again",
+        artist: "John Newman",
+        genre: "Pop",
+        cover: "assets/images/Love Me Again.jpg",
+        audio: "assets/audio/Love Me Again.mp3"
+    },
+    {
+        id: 21,
+        title: "Terima Kasih",
+        artist: "Hal",
+        genre: "Pop",
+        cover: "assets/images/Terima Kasih.jpg",
+        audio: "assets/audio/Terima Kasih.mp3"
+    },
+    {
+        id: 22,
+        title: "L",
+        artist: "Hal",
+        genre: "Pop",
+        cover: "assets/images/L.jpg",
+        audio: "assets/audio/L.mp3"
+    },
+    {
+        id: 23,
+        title: "Sunflower",
+        artist: "Post Malone, Swae Lee",
+        genre: "R&B",
+        cover: "assets/images/Sunflower.jpg",
+        audio: "assets/audio/Sunflower.mp3"
+    },
+    {
+        id: 24,
+        title: "Drag Path",
+        artist: "Twenty One Pilots",
+        genre: "Indie",
+        cover: "assets/images/Drag Path.jpg",
+        audio: "assets/audio/Drag Path.mp3"
+    },
+    
 ];
 
 const audioPlayer = document.querySelector("#audio-player");
