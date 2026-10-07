@@ -255,13 +255,37 @@ const songs = [
         cover: "assets/images/Imagination.jpg",
         audio: "assets/audio/Imagination.mp3"
     },
-        {
+    {
         id: 33,
         title: "I Look After You",
         artist: "The Fray",
         genre: "Rock",
         cover: "assets/images/I Look After You.jpg",
         audio: "assets/audio/I Look After You.mp3"
+    },
+    {
+        id: 34,
+        title: "Separuh Aku",
+        artist: "NOAH",
+        genre: "Pop",
+        cover: "assets/images/Separuh Aku.jpg",
+        audio: "assets/audio/Separuh Aku.mp3"
+    },
+    {
+        id: 35,
+        title: "Love",
+        artist: "Weave To Earth",
+        genre: "Indie",
+        cover: "assets/images/Love.jpg",
+        audio: "assets/audio/Love.mp3"
+    },
+    {
+        id: 36,
+        title: "Earrings",
+        artist: "Malcolm Todd",
+        genre: "Indie",
+        cover: "assets/images/Earrings.jpg",
+        audio: "assets/audio/Earrings.mp3"
     },
     
 ];
