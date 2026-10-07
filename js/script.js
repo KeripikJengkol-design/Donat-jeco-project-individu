@@ -126,7 +126,23 @@ const songs = [
         genre: "R&B",
         cover: "assets/images/Somebody Pleasure.jpg",
         audio: "assets/audio/Somebody's Pleasure.mp3"
-    }
+    },
+    {
+        id: 17,
+        title: "Ocean & Engines",
+        artist: "NIKI",
+        genre: "Pop",
+        cover: "assets/images/Oceans & Engines.jpg",
+        audio: "assets/audio/Oceans & Engines.mp3"
+    },
+    {
+        id: 18,
+        title: "I Wanna Be Yours",
+        artist: "Arctic Monkeys",
+        genre: "Pop",
+        cover: "assets/images/I Wanna Be Yours.jpg",
+        audio: "assets/audio/I Wanna Be Yours.mp3"
+    },
 ];
 
 const audioPlayer = document.querySelector("#audio-player");
